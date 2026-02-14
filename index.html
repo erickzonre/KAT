@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Corazón</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #3a0ca3, #7209b7, #f72585);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    color:white;
+}
+
+.contenedor{
+    background: rgba(0,0,0,0.7);
+    padding:50px;
+    border-radius:30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    width:420px;
+}
+
+h1{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.corazon{
+    font-size:110px;
+    cursor:pointer;
+    transition: transform 0.3s ease;
+}
+
+.corazon:hover{
+    transform: scale(1.2);
+}
+
+.mensaje{
+    margin-top:25px;
+    font-size:19px;
+    font-weight:bold;
+    color:#ffd1dc;
+    opacity:0;
+    transition:1s;
+}
+
+.mostrar{
+    opacity:1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <h1>Hola soy Erikzon ❤️<br>¿Quieres saber cómo está mi corazón?</h1>
+    
+    <div id="corazon" class="corazon" onclick="romperCorazon()">❤️</div>
+
+    <div id="mensaje" class="mensaje">
+        Me lastimaste y así me has dejado, Katsumy... 💔<br>
+        Gracias por todo.<br>
+        Pronto seré feliz.
+    </div>
+</div>
+
+<script>
+function romperCorazon(){
+    const corazon = document.getElementById("corazon");
+    const mensaje = document.getElementById("mensaje");
+
+    // Cambiar a corazón roto
+    corazon.innerHTML = "💔";
+
+    // Mostrar mensaje
+    mensaje.classList.add("mostrar");
+
+    // Abrir video en YouTube después de 1 segundo
+    setTimeout(function(){
+        window.open("https://www.youtube.com/watch?v=j9rz_WobuQ0", "_blank");
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
